@@ -1,0 +1,35 @@
+.left{
+    background-color: white;
+    width: 50%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 110px 110px 110px 110px 110px;
+    grid-gap: 5px;
+    float: left;
+}
+.right{
+    background-color:skyblue;
+    width: 49.5%;
+    height: 600px;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+@media(max-width: 600px){
+    .left, .right{
+        width: 100%;
+        height: 300px;
+        grid-template-rows: 70px 70px 70px 70px 70px;
+        grid-gap: 2px;
+    }
+    .parent{
+        flex-direction: column-reverse;
+    }
+}
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+}
